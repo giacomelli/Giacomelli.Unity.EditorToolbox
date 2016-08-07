@@ -1,0 +1,3 @@
+[submodule "src/Giacomelli.Unity.Metadata"]
+	path = src/Giacomelli.Unity.Metadata
+	url = https://github.com/giacomelli/Giacomelli.Unity.Metadata.git
