@@ -7,6 +7,6 @@
           <Message Text="### Copying $(MSBuildProjectName) files ..." Importance="high" />
  
           <Copy
-              SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(MSBuildProjectDirectory)\..\..\..\..\..\..\Skahal\Apps\Buildron-Classic-Mods\src\Buildron.ClassicMods.BuildMod\Assets\Scripts\references\%(RecursiveDir)%(Filename)%(Extension)')"/>         
+              SourceFiles="@(FilesToCopy)" DestinationFiles="@(FilesToCopy->'$(MSBuildProjectDirectory)\..\..\..\..\Skahal\Apps\Buildron-Classic-Mods\src\Buildron.ClassicMods.BuildMod\Assets\Scripts\references\%(RecursiveDir)%(Filename)%(Extension)')"/>         
     </Target>
 </Project>

@@ -1,11 +1,26 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giacomelli.Unity.EditorToolbox", "Giacomelli.Unity.EditorToolbox\Giacomelli.Unity.EditorToolbox.csproj", "{349DBDC6-F150-42A1-8115-9252AF2A64BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giacomelli.Unity.Metadata", "Giacomelli.Unity.Metadata\src\Giacomelli.Unity.Metadata\Giacomelli.Unity.Metadata.csproj", "{209EC42E-0D4F-40AB-AE1A-5A850251A61E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Framework", "Giacomelli.Unity.Metadata\src\Infrastructure.Framework\Infrastructure.Framework.csproj", "{5B3E05FE-9A86-4AFC-92D9-98F2BF7C696C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Giacomelli.Unity.Metadata.FunctionalTests", "Giacomelli.Unity.Metadata\src\Giacomelli.Unity.Metadata.FunctionalTests\Giacomelli.Unity.Metadata.FunctionalTests.csproj", "{ED6E5ABA-5463-4B10-9233-7B317684D724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Giacomelli.Unity.Metadata\src\Domain\Domain.csproj", "{209EC42E-0D4F-40AB-AE1A-5A850251A61E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Giacomelli.Unity.Metadata", "Giacomelli.Unity.Metadata", "{A92D8A74-1475-4E1E-BF45-5D15ED304FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.UnitTests", "Giacomelli.Unity.Metadata\src\Domain.UnitTests\Domain.UnitTests.csproj", "{C387EA26-8A1E-4EF3-880D-D78BB90C61FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.IO", "Giacomelli.Unity.Metadata\src\Infrastructure.IO\Infrastructure.IO.csproj", "{CC4F3781-D692-4120-BC5A-F585E7739F87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.IO.FunctionalTests", "Giacomelli.Unity.Metadata\src\Infrastructure.IO.FunctionalTests\Infrastructure.IO.FunctionalTests.csproj", "{939DC4C4-DB63-4E82-8C88-52FB3BADB3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Bootstrap", "Giacomelli.Unity.Metadata\src\Infrastructure.Bootstrap\Infrastructure.Bootstrap.csproj", "{D53E47C9-1302-4D6D-AA9F-A81B2A447A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Repositories", "Giacomelli.Unity.Metadata\src\Infrastructure.Repositories\Infrastructure.Repositories.csproj", "{BD459601-C26C-4AB3-89EC-F131A056536F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Framework.UnitTests", "Giacomelli.Unity.Metadata\src\Infrastructure.Framework.UnitTests\Infrastructure.Framework.UnitTests.csproj", "{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,13 +32,50 @@ Global
 		{349DBDC6-F150-42A1-8115-9252AF2A64BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{349DBDC6-F150-42A1-8115-9252AF2A64BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{349DBDC6-F150-42A1-8115-9252AF2A64BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B3E05FE-9A86-4AFC-92D9-98F2BF7C696C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3E05FE-9A86-4AFC-92D9-98F2BF7C696C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3E05FE-9A86-4AFC-92D9-98F2BF7C696C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3E05FE-9A86-4AFC-92D9-98F2BF7C696C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{209EC42E-0D4F-40AB-AE1A-5A850251A61E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{209EC42E-0D4F-40AB-AE1A-5A850251A61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{209EC42E-0D4F-40AB-AE1A-5A850251A61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209EC42E-0D4F-40AB-AE1A-5A850251A61E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED6E5ABA-5463-4B10-9233-7B317684D724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED6E5ABA-5463-4B10-9233-7B317684D724}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED6E5ABA-5463-4B10-9233-7B317684D724}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED6E5ABA-5463-4B10-9233-7B317684D724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C387EA26-8A1E-4EF3-880D-D78BB90C61FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C387EA26-8A1E-4EF3-880D-D78BB90C61FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C387EA26-8A1E-4EF3-880D-D78BB90C61FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C387EA26-8A1E-4EF3-880D-D78BB90C61FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4F3781-D692-4120-BC5A-F585E7739F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4F3781-D692-4120-BC5A-F585E7739F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4F3781-D692-4120-BC5A-F585E7739F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4F3781-D692-4120-BC5A-F585E7739F87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{939DC4C4-DB63-4E82-8C88-52FB3BADB3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939DC4C4-DB63-4E82-8C88-52FB3BADB3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939DC4C4-DB63-4E82-8C88-52FB3BADB3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939DC4C4-DB63-4E82-8C88-52FB3BADB3E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D53E47C9-1302-4D6D-AA9F-A81B2A447A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53E47C9-1302-4D6D-AA9F-A81B2A447A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53E47C9-1302-4D6D-AA9F-A81B2A447A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53E47C9-1302-4D6D-AA9F-A81B2A447A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD459601-C26C-4AB3-89EC-F131A056536F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD459601-C26C-4AB3-89EC-F131A056536F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD459601-C26C-4AB3-89EC-F131A056536F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD459601-C26C-4AB3-89EC-F131A056536F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B3E05FE-9A86-4AFC-92D9-98F2BF7C696C} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{209EC42E-0D4F-40AB-AE1A-5A850251A61E} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{C387EA26-8A1E-4EF3-880D-D78BB90C61FA} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{CC4F3781-D692-4120-BC5A-F585E7739F87} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{939DC4C4-DB63-4E82-8C88-52FB3BADB3E7} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{D53E47C9-1302-4D6D-AA9F-A81B2A447A31} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{BD459601-C26C-4AB3-89EC-F131A056536F} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
 	EndGlobalSection
 EndGlobal
