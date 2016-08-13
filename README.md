@@ -5,18 +5,21 @@ Giacomelli.Unity.EditorToolbox
 [![GitHub release](https://img.shields.io/github/release/giacomelli/Giacomelli.Unity.EditorToolbox.svg?maxAge=2592000)]()
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/Giacomelli.Unity.EditorToolbox/master/LICENSE)
 
-This editor toolbox is (or will be) a collection of tools to make my life as Unity3d developer easier. I hope it can help others game developers to ;)
+This editor toolbox is (or will be) a collection of tools to make my life as Unity3d developer easier. I hope it can help others game developers too ;)
 
 --------
 
 ##Tools
 
 ###Missing scripts resolver
+You changed the name of your MonoBehaviour script outside of Unity3d editor or decided to put them to an external dll and now your prefabs are showing the message below:
+
+>"Missing (Mono Script). The associate script can not be loaded. Please fix any compile errors and assign a valid script."?
+
 ![](docs/screenshots/MissingMonoScript.png)
 
-You changed the name of your MonoBehaviour script outside of Unity3d editor or decided to put them to an external dll and now your prefabs are showing the message "Missing (Mono Script). The associate script can not be loaded. Please fix any compile errors and assign a valid script."?
 
-This tool was created to try to resolve this problem. It search for prefabs that has missing scripts and fix them.
+The tool "Missing scripts resolver" was created to try to solve this problem. It search for prefabs that has missing scripts and fix them.
 
 --------
 
