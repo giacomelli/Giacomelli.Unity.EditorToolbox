@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Windows\MissingScriptResolverWindow.cs" />
     <Compile Include="Windows\WindowBase.cs" />
+    <Compile Include="Windows\Confirm.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Giacomelli.Unity.Metadata\src\Domain\Domain.csproj">

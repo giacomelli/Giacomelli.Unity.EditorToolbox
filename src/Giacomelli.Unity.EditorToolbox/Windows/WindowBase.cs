@@ -11,6 +11,7 @@ namespace Giacomelli.Unity.EditorToolbox
         #region Fields
         private Vector2 m_logScroll;
         private StringBuilder m_log = new StringBuilder();
+		private Confirm m_confirm;
         #endregion
 
         #region Constructors
@@ -71,6 +72,27 @@ namespace Giacomelli.Unity.EditorToolbox
             EditorGUILayout.EndHorizontal();
             EditorGUILayout.Separator();
         }
+
+		protected abstract void PerformOnGUI();
+
+		private void OnGUI()
+		{
+			if (m_confirm == null)
+			{
+				PerformOnGUI();
+			}
+			else
+			{
+				m_confirm.OnGUI();
+			}
+		}
+
+		protected void Confirm(string message, Action yesCallback, Action noCallback = null)
+		{
+			yesCallback += () => m_confirm = null;
+			noCallback += () => m_confirm = null;
+			m_confirm = new Confirm(message, yesCallback, noCallback);
+		}
         #endregion
     }
 }

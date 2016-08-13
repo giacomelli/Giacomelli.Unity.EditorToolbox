@@ -12,7 +12,9 @@ namespace Giacomelli.Unity.EditorToolbox
     {
         #region Fields
         private Dictionary<PrefabMetadata, IEnumerable<MonoBehaviourMetadata>> m_prefabsWithMissingScripts = new Dictionary<PrefabMetadata, IEnumerable<MonoBehaviourMetadata>>();
-        #endregion
+		private int m_totalMissingScriptsPrefabs;
+		private int m_totalMissingScripts;
+		#endregion
 
         #region Constructors
         public MissingScriptResolverWindow()
@@ -29,10 +31,7 @@ namespace Giacomelli.Unity.EditorToolbox
             instance.ShowUtility();
         }
 
-        /// <summary>
-        /// Draws the window's GUI.
-        /// </summary>
-        private void OnGUI()
+        protected override void PerformOnGUI()
         {
             if (GUILayout.Button("Search"))
             {
@@ -41,20 +40,23 @@ namespace Giacomelli.Unity.EditorToolbox
 
             CreateLogView(minSize.y - 10);
 
-            if (m_prefabsWithMissingScripts.Count > 0)
+            if (m_totalMissingScripts > 0)
             {
                 var style = new GUIStyle(GUI.skin.button);
                 style.normal.textColor = Color.red;
 
-                if (GUILayout.Button("Fix all", style))
-                {
-                    FixMissingMonobehaviours();
-                }
+				if (GUILayout.Button("Fix {0} missing scripts in {1} prefabs".With(m_totalMissingScripts, m_totalMissingScriptsPrefabs), style))
+				{
+					Confirm(
+						"Do you really want to fix all missing scripts?\n\nRemember to make a backup before.",
+						FixMissingMonobehaviours);
+				}               
             }
         }
 
         private void SearchMissingScripts()
         {
+			AssetDatabase.Refresh();
             ResetLog();
             m_prefabsWithMissingScripts = new Dictionary<PrefabMetadata, IEnumerable<MonoBehaviourMetadata>>();
             var scripts = MetadataBootstrap.ScriptMetadataService.GetAllScripts();
@@ -62,13 +64,13 @@ namespace Giacomelli.Unity.EditorToolbox
             var typeService = MetadataBootstrap.TypeService;
             var assetRepository = MetadataBootstrap.AssetRepository;
 
-            foreach (var prefab in prefabs)
+		    foreach (var prefab in prefabs)
             {
                 var missingMonoBehaviours = prefab.GetMissingMonoBehaviours(assetRepository, typeService).ToArray();
 
                 if (missingMonoBehaviours.Length == 0)
                 {
-                    continue;
+			        continue;
                 }
 
                 Log("Prefab: {0}", prefab.Name);
@@ -89,33 +91,46 @@ namespace Giacomelli.Unity.EditorToolbox
 
                     Log("\t\tScript: {0}", scriptName);
                 }
-
-                // Materials.
-                var missingMaterials = prefab.GetMissingMaterials(assetRepository);
-                Log("\t{0} missing materials.", missingMaterials.Count());
-
-                foreach (var m in missingMaterials)
-                {
-                    Log("\t\tMaterial: {0} = {1}", m.FileId, m.FullName);
-                }
             }
+
+			CalculateMissing();
+
+			if (m_totalMissingScripts == 0)
+			{
+				Log("No missing scripts.");
+			}
         }
 
         private void FixMissingMonobehaviours()
         {
+			// Unselect any active object, because in Unity 5.3.5f1 it breaks when any changes happens 
+			// on a selected prefab outside of editor.
+			Selection.activeObject = null;
+
+			ResetLog();
             var assetRepository = MetadataBootstrap.AssetRepository;
             var prefabService = MetadataBootstrap.PrefabMetadataService;
             var log = MetadataBootstrap.Log;
+			var prefabNumber = 0;
 
             foreach (var p in m_prefabsWithMissingScripts)
             {
-                log.Debug("Fixing missing scripts for '{0}'...", p.Key.Name);
+				Log("{0}) Fixing {1} missing scripts in '{2}' prefab.", ++prefabNumber, p.Value.Count(), p.Key.Name);
                 prefabService.FixMissingMonobehaviours(p.Key, p.Value);
-                break;
             }
 
-            log.Debug("Done.");
+			m_prefabsWithMissingScripts.Clear();
+			CalculateMissing();
+
+			Log("Done.");
+			AssetDatabase.Refresh();
         }
+
+		private void CalculateMissing()
+		{
+			m_totalMissingScriptsPrefabs = m_prefabsWithMissingScripts.Count;
+			m_totalMissingScripts = m_prefabsWithMissingScripts.Sum(p => p.Value.Count());
+		}
         #endregion
     }
 }
