@@ -1,11 +1,11 @@
 Giacomelli.Unity.EditorToolbox
 ===========
 
-[![Build status](https://ci.appveyor.com/api/projects/status/h9ptxpyj30ah3mva?svg=true)](https://ci.appveyor.com/project/giacomelli/Giacomelli.Unity.EditorToolbox)
+[![Build status](https://ci.appveyor.com/api/projects/status/19ar3cxvv51b34v9?svg=true)](https://ci.appveyor.com/project/giacomelli/Giacomelli.Unity.EditorToolbox)
 [![GitHub release](https://img.shields.io/github/release/giacomelli/Giacomelli.Unity.EditorToolbox.svg?maxAge=2592000)]()
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/Giacomelli.Unity.EditorToolbox/master/LICENSE)
 
-This editor toolbox is (or will be) a collection of tools to make my life as Unity3d developer easier. I hope it can help others game developers too ;)
+This editor toolbox is (or will be) a collection of tools to make my life as Unity3d developer easier. I hope it can help others game developers to ;)
 
 --------
 
