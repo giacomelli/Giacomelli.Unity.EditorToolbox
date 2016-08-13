@@ -73,6 +73,4 @@ namespace Giacomelli.Unity.EditorToolbox
         }
         #endregion
     }
-
 }
-

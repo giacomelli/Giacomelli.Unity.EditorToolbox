@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Repositories
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Framework.UnitTests", "Giacomelli.Unity.Metadata\src\Infrastructure.Framework.UnitTests\Infrastructure.Framework.UnitTests.csproj", "{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Unity", "Giacomelli.Unity.Metadata\src\Infrastructure.Unity\Infrastructure.Unity.csproj", "{D9B7AE37-6044-4DA9-A483-93AFF8D9B3E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B7AE37-6044-4DA9-A483-93AFF8D9B3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B7AE37-6044-4DA9-A483-93AFF8D9B3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B7AE37-6044-4DA9-A483-93AFF8D9B3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B7AE37-6044-4DA9-A483-93AFF8D9B3E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,5 +83,6 @@ Global
 		{D53E47C9-1302-4D6D-AA9F-A81B2A447A31} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
 		{BD459601-C26C-4AB3-89EC-F131A056536F} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
 		{F0F49004-E8A2-4DD0-AEC5-CC53C3D72B58} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
+		{D9B7AE37-6044-4DA9-A483-93AFF8D9B3E1} = {A92D8A74-1475-4E1E-BF45-5D15ED304FA6}
 	EndGlobalSection
 EndGlobal
