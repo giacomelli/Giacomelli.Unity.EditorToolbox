@@ -5,6 +5,9 @@ configuration: Release
 install:
 - git submodule update --init --recursive
 
+before_build:
+- cmd: nuget restore .\src\Giacomelli.Unity.EditorToolbox.sln
+
 build:
   project: src\Giacomelli.Unity.EditorToolbox.sln
   verbosity: minimal
