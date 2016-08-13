@@ -37,7 +37,7 @@ The available tools (nowadays just the "Missing script resolver") can be access 
 
 Roadmap
 --------
- - Add more tools (Do you have an idea for a tool? Get in touch [@ogiacomelli](http://twitter.com/ogiacomelli)).
+ - Add more tools (do you have an idea for a tool? Get in touch [@ogiacomelli](http://twitter.com/ogiacomelli)).
  
 --------
 
