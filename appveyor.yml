@@ -7,7 +7,7 @@ install:
 
 before_build:
 - cmd: nuget restore .\src\Giacomelli.Unity.EditorToolbox.sln
-- cmd: nuget restore .\src\Giacomelli.Unity.Metadata\src\Giacomelli.Unity.Metadata.sln -PackagesDirectory C:\projects\giacomelli-unity-editortoolbox\src\packages
+- cmd: nuget restore .\src\Giacomelli.Unity.Metadata\src\Giacomelli.Unity.Metadata.sln -PackagesDirectory C:\projects\giacomelli-unity-editortoolbox\src\Giacomelli.Unity.Metadata\src\
 
 build:
   project: src\Giacomelli.Unity.EditorToolbox.sln
