@@ -1,0 +1,15 @@
+version: 0.0.{build}
+os: Visual Studio 2015
+configuration: Release
+  
+build:
+  project: src\Giacomelli.Unity.EditorToolbox.sln
+  verbosity: minimal
+
+after_build:
+- cmd: >-    
+   .\tools\build-ci.cmd
+   
+artifacts:
+  - path: .\build\Giacomelli.Unity.EditorToolbox.dll
+    name: Giacomelli.Unity.EditorToolbox.dll
