@@ -70,5 +70,4 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\msbuilds\Giacomelli.Unity.EditorToolbox.targets" />
 </Project>
