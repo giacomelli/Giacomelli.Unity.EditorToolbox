@@ -2,7 +2,6 @@ Giacomelli.Unity.EditorToolbox
 ===========
 
 [![Build status](https://ci.appveyor.com/api/projects/status/19ar3cxvv51b34v9?svg=true)](https://ci.appveyor.com/project/giacomelli/Giacomelli.Unity.EditorToolbox)
-[![GitHub release](https://img.shields.io/github/release/giacomelli/Giacomelli.Unity.EditorToolbox.svg?maxAge=2592000)]()
 [![License](http://img.shields.io/:license-MIT-blue.svg)](https://raw.githubusercontent.com/giacomelli/Giacomelli.Unity.EditorToolbox/master/LICENSE)
 
 This editor toolbox is (or will be) a collection of tools to make my life as Unity3d developer easier. I hope it can help others game developers too ;)
@@ -19,7 +18,7 @@ You changed the name of your MonoBehaviour script outside of Unity3d editor or d
 ![](docs/screenshots/MissingMonoScript.png)
 
 
-The tool "Missing scripts resolver" was created to try to solve this problem. It search for prefabs that has missing scripts and fix them.
+The tool "Missing scripts resolver" was created to try to solve this problem. It searchs for prefabs with "missing scripts" problem and fix them.
 
 --------
 
