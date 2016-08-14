@@ -59,7 +59,7 @@ namespace Giacomelli.Unity.EditorToolbox
 			AssetDatabase.Refresh();
             ResetLog();
             m_prefabsWithMissingScripts = new Dictionary<PrefabMetadata, IEnumerable<MonoBehaviourMetadata>>();
-            var scripts = MetadataBootstrap.ScriptMetadataService.GetAllScripts();
+            var scripts = MetadataBootstrap.ScriptMetadataService.GetScripts();
             var prefabs = MetadataBootstrap.PrefabMetadataService.GetPrefabs();
             var typeService = MetadataBootstrap.TypeService;
             var assetRepository = MetadataBootstrap.AssetRepository;
