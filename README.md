@@ -7,6 +7,9 @@ This editor toolbox is (or will be) a collection of tools to make my life as Uni
 
 --------
 
+## Unity version
+- Tested on **Unity 5.3.6**
+
 ## Tools
 
 ### Missing scripts resolver
